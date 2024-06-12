@@ -105,8 +105,8 @@
                         </span> -->
                         
                         <!-- Video Link. -->
-                        <!-- <span class="link-block">
-                            <a target="_blank" href="https://youtu.be/Yvn4eR05A3M"
+                        <span class="link-block">
+                            <a target="_blank" href="https://www.youtube.com/watch?v=mI-uJaSlHBA"
                             class="external-link button is-normal is-rounded is-dark">
                             <span class="icon">
                                 <i class="fab fa-youtube"></i>
@@ -135,7 +135,18 @@
 
 
 <div class="container is-max-widescreen">
-    <div class="hero-body">
+
+    <div class="container is-max-widescreen">
+        <div class="rows">
+            <!-- <h2 class="title is-3">Video</h2> -->
+            <div class="publication-video">
+                <iframe src="https://www.youtube.com/embed/mI-uJaSlHBA?si=zbSfbR-ksQriVmUa"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <!-- <div class="hero-body">
         <div class="columns is-vcentered  is-centered">
             <img src="media/figures/teaser.png" class="interpolation-image" style="width: 99%; height: auto;"/>
         </div>
@@ -146,8 +157,20 @@
                 <b>All videos are in real time</b>.
             </h2>
         
+    </div> -->
+    
     </div>
+
+    
+<div class="container is-max-widescreen">
+    
+    <div class="hero-body">
+        <h2 class="subtitle has-text-centered">
+            <b>All videos are in real time</b>.
+        </br>        
     </div>
+    
+</div>
 
 <section class="hero is-light is-small">
     <div class="hero-body">
@@ -772,35 +795,6 @@ All videos are in <b>real time</b>.
 
 <section class="section">
     <div class="container is-max-widescreen">
-        
-        <div class="rows">
-            
-            
-            <!-- Animation. -->
-            <div class="rows is-centered ">
-                <div class="row is-full-width">
-                    <h2 class="title is-3"><span class="dperact">Meta-Control</span> Method</h2>
-                    
-                    <!-- Interpolating. -->
-                    <div class="content has-text-justified">
-                        <!-- <br> -->
-                    </div>
-                    <img src="media/figures/hierarchical-synthesis.png" class="interpolation-image" />
-                </br>
-            </br>
-            <p class="content has-text-justified">
-                Overview of Meta-Control. Meta-Control harness LLM's control knowledge to synthesize skills with a 3-level pipeline: strategy level, data flow level, and parameter level. The user only needs to provide the skill description. Meta-Control first designs the system with dynamic model and controller templates, then connects all modules by correctly understanding the semantic meaning of the interfaces, and finally evaluates the synthesized control system and optimizes the parameters based on execution results through few-shot interactions. 
-            </p>
-            
-        </br>
-    <!--/ Re-rendering. -->
-</div>
-</div>
-</section>
-
-
-<section class="section">
-    <div class="container is-max-widescreen">
         <div class="rows">
             <h2 class="title is-3"></h2>
             <h2 class="title is-3">Exploiting Dynamical Priors Internalized by LLM</h2>
@@ -903,6 +897,34 @@ All videos are in <b>real time</b>.
     </div>
 </section>
 
+
+<section class="section">
+    <div class="container is-max-widescreen">
+        
+        <div class="rows">
+            
+            
+            <!-- Animation. -->
+            <div class="rows is-centered ">
+                <div class="row is-full-width">
+                    <h2 class="title is-3">Meta-Control Pipeline</h2>
+                    
+                    <!-- Interpolating. -->
+                    <div class="content has-text-justified">
+                        <!-- <br> -->
+                    </div>
+                    <img src="media/figures/hierarchical-synthesis.png" class="interpolation-image" />
+                </br>
+            </br>
+            <p class="content has-text-justified">
+                Overview of Meta-Control pipeline. Meta-Control harness LLM's control knowledge to synthesize skills with a 3-level pipeline: strategy level, data flow level, and parameter level. The user only needs to provide the skill description. Meta-Control first designs the system with dynamic model and controller templates, then connects all modules by correctly understanding the semantic meaning of the interfaces, and finally evaluates the synthesized control system and optimizes the parameters based on execution results through few-shot interactions. 
+            </p>
+            
+        </br>
+    <!--/ Re-rendering. -->
+</div>
+</div>
+</section>
 
 
 <section class="section">
