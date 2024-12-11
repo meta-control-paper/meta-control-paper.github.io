@@ -46,7 +46,17 @@
         };
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+    <style>
+        .gradient-text {
+            background: linear-gradient(to right, rgb(20, 160, 190), rgb(60, 40, 160));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+    
 </head>
+
 <body>
     
     <section class="hero">
@@ -135,12 +145,13 @@
 
 
 <div class="container is-max-widescreen">
-
+    
     <div class="container is-max-widescreen">
         <div class="rows">
             <!-- <h2 class="title is-3">Video</h2> -->
             <div class="publication-video">
-                <iframe src="https://www.youtube.com/embed/YKKbGnWYKsg?si=zbSfbR-ksQriVmUa"
+                
+                <iframe src="https://www.youtube.com/embed/YKKbGnWYKsg?si=1AgVy38MLYpJogTA"
                 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
         </div>
@@ -153,15 +164,15 @@
         <h2 class="subtitle has-text-centered">
             Opening the door, moving safely, and balancing are heterogeneous skills and have conflicting requirements that can be difficult to satisfy with a fixed control strategy and fixed state-action representation. Meta-Control addresses the challenge with a composable hierarchical control formulation and LLM, enabling automatic model-based control synthesis. The synthesized skill has customized state action representations, dynamic models, and controllers that perfectly align with the objectives and requirements.
         </br>        
-        </br>
-                <b>All videos are in real time</b>.
-            </h2>
-        
-    </div> -->
-    
-    </div>
+    </br>
+    <b>All videos are in real time</b>.
+</h2>
 
-    
+</div> -->
+
+</div>
+
+
 <div class="container is-max-widescreen">
     
     <div class="hero-body">
@@ -174,12 +185,11 @@
 
 <section class="hero is-light is-small">
     <div class="hero-body">
-       
         <div class="container">
             <div id="results-carousel" class="carousel results-carousel">
                 <div class="item">
                     <video poster="" autoplay muted loop height="100%">
-                        <source src="media/videos/open_door_impedance.mp4"
+                        <source src="media/videos/wipe_force.mp4"
                         type="video/mp4">
                     </video>
                 </div>
@@ -191,7 +201,19 @@
                 </div>
                 <div class="item">
                     <video poster="" autoplay muted loop height="100%">
-                        <source src="media/videos/wipe_force.mp4"
+                        <source src="media/videos/open_drawer.mp4"
+                        type="video/mp4">
+                    </video>
+                </div>
+                <div class="item">
+                    <video poster="" autoplay muted loop height="100%">
+                        <source src="media/videos/open_door_impedance.mp4"
+                        type="video/mp4">
+                    </video>
+                </div>
+                <div class="item">
+                    <video poster="" autoplay muted loop height="100%">
+                        <source src="media/videos/push_button.mp4"
                         type="video/mp4">
                     </video>
                 </div>
@@ -254,8 +276,8 @@
         <!-- <h2 class="subtitle has-text-centered">
         </br>
         
-        </h2> -->
-    </div>
+    </h2> -->
+</div>
 </section>
 
 
@@ -303,70 +325,34 @@
                 </span>
             </br>
         </br>
-                <div class="columns">
-                    <div class="column has-text-centered">
-                        <video id="dist1"
-                        controls
-                        muted
-                        autoplay
-                        loop
-                        width="99%">
-                        <source src="media/videos/wipe_trajectory.mp4" 
-                        type="video/mp4">
-                    </video>
-                    <p style="text-align:center">
-                        <font color="red">Failure: </font>Wipe the whiteboard with a Cartesian trajectory planner. Failed because force constraints can not be specified.
-                    </p>
-                </div>
-                
-                <div class="column has-text-centered">
-                    <video id="dist2"
-                    controls
-                    muted
-                    autoplay
-                    loop
-                    width="99%">
-                    <source src="media/videos/open_door_trajectory.mp4" 
-                    type="video/mp4">
-                </video>
-                <p style="text-align:center">
-                    <font color="red">Failure: </font>Open the cabinet with a joint space planner. Failed because planned swing path is not accurate.
-                </p>
-            </div>
-            
+        <div class="columns">
             <div class="column has-text-centered">
-                <video id="dist2"
+                <video id="dist1"
                 controls
                 muted
                 autoplay
+                loop
                 width="99%">
-                <source src="media/videos/balance_fail.mp4" 
+                <source src="media/videos/wipe_trajectory.mp4" 
                 type="video/mp4">
             </video>
             <p style="text-align:center">
-                <font color="red">Failure: </font>Balance a cart pole with a MPC. Failed because the feedback frequency is too low.
+                <font color="red">Failure: </font>Wipe the whiteboard with a Cartesian trajectory planner. Failed because force constraints can not be specified.
             </p>
         </div>
-    </div>
-    <!-- <h2 class="title is-5">Meta-Control finds the most approriate representations and control strategies for heterogeneous robot skills</h2> -->
-    <span>
-        To address this problem, Meta-Control finds the most approriate representations and control strategies on the fly for heterogeneous robot skills.
-    </span>
-</br>
-</br>
-    <div class="columns">
+        
         <div class="column has-text-centered">
-            <video id="dist1"
+            <video id="dist2"
             controls
             muted
             autoplay
             loop
             width="99%">
-            <source src="media/videos/wipe_force.mp4" 
+            <source src="media/videos/open_door_trajectory.mp4" 
             type="video/mp4">
         </video>
         <p style="text-align:center">
-            <font color="green">Meta-Control: </font>Gripepr planner + force pose hybrid controller. Maintain contact force on the whiteboard.
+            <font color="red">Failure: </font>Open the cabinet with a joint space planner. Failed because planned swing path is not accurate.
         </p>
     </div>
     
@@ -375,14 +361,50 @@
         controls
         muted
         autoplay
-        loop
         width="99%">
-        <source src="media/videos/open_door_impedance.mp4" 
+        <source src="media/videos/balance_fail.mp4" 
         type="video/mp4">
     </video>
     <p style="text-align:center">
-        <font color="green">Meta-Control: </font>Cartesian space planner + stiffness controller. Executable even with inaccurate swing path.
+        <font color="red">Failure: </font>Balance a cart pole with a MPC. Failed because the feedback frequency is too low.
     </p>
+</div>
+</div>
+<!-- <h2 class="title is-5">Meta-Control finds the most approriate representations and control strategies for heterogeneous robot skills</h2> -->
+<span>
+    To address this problem, Meta-Control finds the most approriate representations and control strategies on the fly for heterogeneous robot skills.
+</span>
+</br>
+</br>
+<div class="columns">
+    <div class="column has-text-centered">
+        <video id="dist1"
+        controls
+        muted
+        autoplay
+        loop
+        width="99%">
+        <source src="media/videos/wipe_force.mp4" 
+        type="video/mp4">
+    </video>
+    <p style="text-align:center">
+        <font color="green">Meta-Control: </font>Gripepr planner + force pose hybrid controller. Maintain contact force on the whiteboard.
+    </p>
+</div>
+
+<div class="column has-text-centered">
+    <video id="dist2"
+    controls
+    muted
+    autoplay
+    loop
+    width="99%">
+    <source src="media/videos/open_door_impedance.mp4" 
+    type="video/mp4">
+</video>
+<p style="text-align:center">
+    <font color="green">Meta-Control: </font>Cartesian space planner + stiffness controller. Executable even with inaccurate swing path.
+</p>
 </div>
 
 <div class="column has-text-centered">
@@ -422,96 +444,14 @@ All videos are in <b>real time</b>.
 </h2> -->
 
 <!-- 
-<section class="section">
-    <div class="container is-max-widescreen">
-        
-        <div class="rows">
-            <h2 class="title is-3">Comparison of Different Control Strategy</h2>
-            
-            <p class="content has-text-justified">
-                The commonly used position based controller has difficulty generalize to challenging manipulation.
-            </p>
-            
-            <div class="columns">
-                <div class="column has-text-centered">
-                    <video id="dist1"
-                    controls
-                    muted
-                    autoplay
-                    loop
-                    width="99%">
-                    <source src="media/videos/open_door_trajectory.mp4" 
-                    type="video/mp4">
-                </video>
-                <p style="text-align:center">
-                    Open the cabinet with a position based trajectory planner.
-                </p>
-            </div>
-            
-            <div class="column has-text-centered">
-                <video id="dist2"
-                controls
-                muted
-                autoplay
-                loop
-                width="99%">
-                <source src="media/videos/open_door_impedance_trim.mp4" 
-                type="video/mp4">
-            </video>
-            <p style="text-align:center">
-                Open the cabinet with a Meta-Control synthesized compliant controller.
-            </p>
-        </div>
-    </div>
-    
-    <div class="container is-max-widescreen">    
-        <div class="rows">
-            
-            <div class="columns">
-                <div class="column has-text-centered">
-                    <video id="dist1"
-                    controls
-                    muted
-                    autoplay
-                    loop
-                    width="99%">
-                    <source src="media/videos/wipe_trajectory.mp4" 
-                    type="video/mp4">
-                </video>
-                <p style="text-align:center">
-                    Wipe the whiteboard with a position based trajectory planner.
-                </p>
-            </div>
-            
-            <div class="column has-text-centered">
-                <video id="dist2"
-                controls
-                muted
-                autoplay
-                loop
-                width="99%">
-                <source src="media/videos/wipe_force.mp4" 
-                type="video/mp4">
-            </video>
-            <p style="text-align:center">
-                Wipe the whiteboard with a Meta-Control synthesized hybrid force position  controller.
-            </p>
-        </div>
-    </div>
-</section> -->
-
-
-<!-- 
     <section class="section">
         <div class="container is-max-widescreen">
             
             <div class="rows">
-                <h2 class="title is-3">High Frequency Closed-loop Control</h2>
+                <h2 class="title is-3">Comparison of Different Control Strategy</h2>
                 
                 <p class="content has-text-justified">
-                    Meta-Control synthesized controller is fully model based, 
-                    enabling high frequency Closed-loop control, 
-                    which is critical to accomplish some challenging manipulation tasks such as balancing a cart pole.
+                    The commonly used position based controller has difficulty generalize to challenging manipulation.
                 </p>
                 
                 <div class="columns">
@@ -522,7 +462,251 @@ All videos are in <b>real time</b>.
                         autoplay
                         loop
                         width="99%">
+                        <source src="media/videos/open_door_trajectory.mp4" 
+                        type="video/mp4">
+                    </video>
+                    <p style="text-align:center">
+                        Open the cabinet with a position based trajectory planner.
+                    </p>
+                </div>
+                
+                <div class="column has-text-centered">
+                    <video id="dist2"
+                    controls
+                    muted
+                    autoplay
+                    loop
+                    width="99%">
+                    <source src="media/videos/open_door_impedance_trim.mp4" 
+                    type="video/mp4">
+                </video>
+                <p style="text-align:center">
+                    Open the cabinet with a Meta-Control synthesized compliant controller.
+                </p>
+            </div>
+        </div>
+        
+        <div class="container is-max-widescreen">    
+            <div class="rows">
+                
+                <div class="columns">
+                    <div class="column has-text-centered">
+                        <video id="dist1"
+                        controls
+                        muted
+                        autoplay
+                        loop
+                        width="99%">
+                        <source src="media/videos/wipe_trajectory.mp4" 
+                        type="video/mp4">
+                    </video>
+                    <p style="text-align:center">
+                        Wipe the whiteboard with a position based trajectory planner.
+                    </p>
+                </div>
+                
+                <div class="column has-text-centered">
+                    <video id="dist2"
+                    controls
+                    muted
+                    autoplay
+                    loop
+                    width="99%">
+                    <source src="media/videos/wipe_force.mp4" 
+                    type="video/mp4">
+                </video>
+                <p style="text-align:center">
+                    Wipe the whiteboard with a Meta-Control synthesized hybrid force position  controller.
+                </p>
+            </div>
+        </div>
+    </section> -->
+    
+    
+    <!-- 
+        <section class="section">
+            <div class="container is-max-widescreen">
+                
+                <div class="rows">
+                    <h2 class="title is-3">High Frequency Closed-loop Control</h2>
+                    
+                    <p class="content has-text-justified">
+                        Meta-Control synthesized controller is fully model based, 
+                        enabling high frequency Closed-loop control, 
+                        which is critical to accomplish some challenging manipulation tasks such as balancing a cart pole.
+                    </p>
+                    
+                    <div class="columns">
+                        <div class="column has-text-centered">
+                            <video id="dist1"
+                            controls
+                            muted
+                            autoplay
+                            loop
+                            width="99%">
+                            <source src="media/videos/balance_front.mp4" 
+                            type="video/mp4">
+                        </video>
+                    </div>
+                    
+                    <div class="column has-text-centered">
+                        <video id="dist2"
+                        controls
+                        muted
+                        autoplay
+                        loop
+                        width="99%">
+                        <source src="media/videos/balance_side.mp4" 
+                        type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <p style="text-align:center">
+                Open the cabinet with a Meta-Control synthesized compliant controller.
+            </p>
+        </section>
+    -->
+    
+    
+<section class="section">
+    <div class="container is-max-widescreen">
+        
+        <div class="rows">
+            
+            
+            <!-- Animation. -->
+            <div class="rows is-centered ">
+                <div class="row is-full-width">
+                    <h2 class="title is-3"><span class="dperact">Meta-Control</span> Method</h2>
+                    
+                    <!-- Interpolating. -->
+                    <div class="content has-text-justified">
+                        <!-- <br> -->
+                    </div>
+                    <img src="media/figures/overview-prompt-hor.png" class="interpolation-image" />
+                </br>
+            </br>
+            <p class="content has-text-justified">
+                Overview of Meta-Control: The user only needs to provide a skill description. Meta-Control then leverages the control knowledge of LLMs to synthesize skills through a three-level pipeline: strategy level, data flow level, and parameter level. For each level, we have designed a generic prompt with placeholders, which are dynamically replaced with user input or code extracted from the LLM response during runtime, utilizing a code extractor to make the prompt task-specific. The extracted code is also used to construct the control system. At each level, if the LLM-generated code results in an error, a reflection phase is initiated. We have embedded design principles and checklists of common errors within the design and reflection prompts to assist the LLM in producing correct code. The generic prompt design with placeholders allows Meta-Control to generalize to unseen tasks without modification.
+            </p>
+            
+        </br>
+        <!--/ Re-rendering. -->
+    </div>
+</div>
+</section>
+
+    
+    <section class="section">
+        <div class="container is-max-widescreen">
+            
+            <div class="rows">
+                <!-- <h2 class="title is-3"></h2> -->
+                <h2 class="title is-3">Satisfying Diverse Task Requirements</h2>
+                <p class="content has-text-justified">
+                    Meta-Control can satisfy diverse task requirements that may happen in open world manipulation tasks, such as
+                    <li><strong>High Frequency Closed-loop Control</strong>: Meta-Control designs a LQR controller with a linearized dynamic model to compute the desired force on the cart, and designs a hybrid pose force controller to track the desired force and the neutral position at the same time. This design enables high-frequency closed-loop control, and guarantees convergence.</li>
+                    <li><strong>Compliant Execution</strong>: Meta-Control designs a Cartesian space planner to decide the desired goal position of the door knob, then use a impedance controller to track the desired position while remaining compliant to external forces that caused by trajectory mismatch with the swing path, leading to a smooth and safe execution.</li>
+                    <li><strong>Collison Avoidance</strong>: Meta-Control first use a MPC controller to plan collison free waypoints for the <b>gripper</b>, then track the way points with a safe controller, which can guarantee collision avoidance for the <b>whole arm</b>.</li>
+                </p>
+                <br>
+                
+                <div class="columns">
+                    <div class="column has-text-centered">
+                        <video id="dist1"
+                        controls
+                        muted
+                        autoplay
+                        loop
+                        width="99%">
                         <source src="media/videos/balance_front.mp4" 
+                        type="video/mp4"></video>
+                    </div>
+                    
+                    <div class="column has-text-centered">
+                        <video id="dist2"
+                        controls
+                        muted
+                        autoplay
+                        loop
+                        width="99%">
+                        <source src="media/videos/open_door.mp4" 
+                        type="video/mp4"></video>
+                    </div>
+                    
+                    <div class="column has-text-centered">
+                        <video id="dist2"
+                        controls
+                        muted
+                        autoplay
+                        loop
+                        width="99%">
+                        <source src="media/videos/safe_pick.mp4" 
+                        type="video/mp4"></video>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column has-text-centered">
+                        <video id="dist2"
+                        controls
+                        muted
+                        autoplay
+                        loop
+                        width="99%">
+                        <source src="media/videos/open_drawer.mp4" 
+                        type="video/mp4"></video>
+                    </div>
+
+                    <div class="column has-text-centered">
+                        <video id="dist2"
+                        controls
+                        muted
+                        autoplay
+                        loop
+                        width="99%">
+                        <source src="media/videos/push_button.mp4" 
+                        type="video/mp4"></video>
+                    </div>
+
+                    <div class="column has-text-centered">
+                        <video id="dist2"
+                        controls
+                        muted
+                        autoplay
+                        loop
+                        width="99%">
+                        <source src="media/videos/wipe_force.mp4" 
+                        type="video/mp4"></video>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </section>
+    
+    
+    <section class="section">
+        <div class="container is-max-widescreen">
+            
+            <div class="rows">
+                <!-- <h2 class="title is-3"></h2> -->
+                <h2 class="title is-3">Generalization to Different Embodiments</h2>
+                <p class="content has-text-justified">
+                    Meta-Control synthesized control system is fully model-based, enabling generalization to different embodiments.
+                    For instance, a control system synthesized on Kinova Gen3 can easily directly generalize to a Franka Panda robot.
+                </p>
+                <br>
+                
+                <div class="columns">
+                    <div class="column has-text-centered">
+                        <video id="dist1"
+                        controls
+                        muted
+                        autoplay
+                        loop
+                        width="99%">
+                        <source src="media/videos/franka_balance.mp4" 
                         type="video/mp4">
                     </video>
                 </div>
@@ -534,42 +718,7 @@ All videos are in <b>real time</b>.
                     autoplay
                     loop
                     width="99%">
-                    <source src="media/videos/balance_side.mp4" 
-                    type="video/mp4">
-                </video>
-            </div>
-        </div>
-        <p style="text-align:center">
-            Open the cabinet with a Meta-Control synthesized compliant controller.
-        </p>
-    </section>
--->
-
-
-
-<section class="section">
-    <div class="container is-max-widescreen">
-        
-        <div class="rows">
-            <!-- <h2 class="title is-3"></h2> -->
-            <h2 class="title is-3">Satisfying Diverse Task Requirements</h2>
-            <p class="content has-text-justified">
-                Meta-Control can satisfy diverse task requirements that may happen in open world manipulation tasks, such as
-                <li><strong>High Frequency Closed-loop Control</strong>: Meta-Control designs a LQR controller with a linearized dynamic model to compute the desired force on the cart, and designs a hybrid pose force controller to track the desired force and the neutral position at the same time. This design enables high-frequency closed-loop control, and guarantees convergence.</li>
-                <li><strong>Compliant Execution</strong>: Meta-Control designs a Cartesian space planner to decide the desired goal position of the door knob, then use a impedance controller to track the desired position while remaining compliant to external forces that caused by trajectory mismatch with the swing path, leading to a smooth and safe execution.</li>
-                <li><strong>Collison Avoidance</strong>: Meta-Control first use a MPC controller to plan collison free waypoints for the <b>gripper</b>, then track the way points with a safe controller, which can guarantee collision avoidance for the <b>whole arm</b>.</li>
-            </p>
-            <br>
-            
-            <div class="columns">
-                <div class="column has-text-centered">
-                    <video id="dist1"
-                    controls
-                    muted
-                    autoplay
-                    loop
-                    width="99%">
-                    <source src="media/videos/balance_front.mp4" 
+                    <source src="media/videos/franka_door.mp4" 
                     type="video/mp4">
                 </video>
             </div>
@@ -581,79 +730,11 @@ All videos are in <b>real time</b>.
                 autoplay
                 loop
                 width="99%">
-                <source src="media/videos/open_door.mp4" 
+                <source src="media/videos/franka_pick.mp4" 
                 type="video/mp4">
             </video>
         </div>
-        
-        <div class="column has-text-centered">
-            <video id="dist2"
-            controls
-            muted
-            autoplay
-            loop
-            width="99%">
-            <source src="media/videos/safe_pick.mp4" 
-            type="video/mp4">
-        </video>
     </div>
-</div>
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section">
-    <div class="container is-max-widescreen">
-        
-        <div class="rows">
-            <!-- <h2 class="title is-3"></h2> -->
-            <h2 class="title is-3">Generalization to Different Embodiments</h2>
-            <p class="content has-text-justified">
-                Meta-Control synthesized control system is fully model-based, enabling generalization to different embodiments.
-                For instance, a control system synthesized on Kinova Gen3 can easily directly generalize to a Franka Panda robot.
-            </p>
-            <br>
-            
-            <div class="columns">
-                <div class="column has-text-centered">
-                    <video id="dist1"
-                    controls
-                    muted
-                    autoplay
-                    loop
-                    width="99%">
-                    <source src="media/videos/franka_balance.mp4" 
-                    type="video/mp4">
-                </video>
-            </div>
-            
-            <div class="column has-text-centered">
-                <video id="dist2"
-                controls
-                muted
-                autoplay
-                loop
-                width="99%">
-                <source src="media/videos/franka_door.mp4" 
-                type="video/mp4">
-            </video>
-        </div>
-        
-        <div class="column has-text-centered">
-            <video id="dist2"
-            controls
-            muted
-            autoplay
-            loop
-            width="99%">
-            <source src="media/videos/franka_pick.mp4" 
-            type="video/mp4">
-        </video>
-    </div>
-</div>
 </div>
 </div>
 </section>
@@ -672,68 +753,34 @@ All videos are in <b>real time</b>.
                 </span>
             </br>
         </br>
-                <div class="columns">
-                    <div class="column has-text-centered">
-                        <video id="dist1"
-                        controls
-                        muted
-                        autoplay
-                        loop
-                        width="99%">
-                        <source src="media/videos/balance0.1.mp4" 
-                        type="video/mp4">
-                    </video>
-                    <p style="text-align:center">
-                        initial pole angle = +0.1 rad
-                    </p>
-                </div>
-                
-                <div class="column has-text-centered">
-                    <video id="dist2"
-                    controls
-                    muted
-                    autoplay
-                    loop
-                    width="99%">
-                    <source src="media/videos/door0.3.mp4" 
-                    type="video/mp4">
-                </video>
-                <p style="text-align:center">
-                    door width = 0.3 m
-                </p>
-            </div>
-            
+        <div class="columns">
             <div class="column has-text-centered">
-                <video id="dist2"
+                <video id="dist1"
                 controls
                 muted
                 autoplay
                 loop
                 width="99%">
-                <source src="media/videos/pick_short.mp4" 
+                <source src="media/videos/balance0.1.mp4" 
                 type="video/mp4">
             </video>
             <p style="text-align:center">
-                object arrangement 1
+                initial pole angle = +0.1 rad
             </p>
         </div>
-    </div>
-    <!-- <h2 class="title is-5">Meta-Control finds the most approriate representations and control strategies for heterogeneous robot skills</h2> -->
-</br>
-</br>
-    <div class="columns">
+        
         <div class="column has-text-centered">
-            <video id="dist1"
+            <video id="dist2"
             controls
             muted
             autoplay
             loop
             width="99%">
-            <source src="media/videos/balance0.5.mp4" 
+            <source src="media/videos/door0.3.mp4" 
             type="video/mp4">
         </video>
         <p style="text-align:center">
-            initial pole angle = -0.5 rad
+            door width = 0.3 m
         </p>
     </div>
     
@@ -744,12 +791,46 @@ All videos are in <b>real time</b>.
         autoplay
         loop
         width="99%">
-        <source src="media/videos/door0.6.mp4" 
+        <source src="media/videos/pick_short.mp4" 
         type="video/mp4">
     </video>
     <p style="text-align:center">
-        door width = 0.6 m
+        object arrangement 1
     </p>
+</div>
+</div>
+<!-- <h2 class="title is-5">Meta-Control finds the most approriate representations and control strategies for heterogeneous robot skills</h2> -->
+</br>
+</br>
+<div class="columns">
+    <div class="column has-text-centered">
+        <video id="dist1"
+        controls
+        muted
+        autoplay
+        loop
+        width="99%">
+        <source src="media/videos/balance0.5.mp4" 
+        type="video/mp4">
+    </video>
+    <p style="text-align:center">
+        initial pole angle = -0.5 rad
+    </p>
+</div>
+
+<div class="column has-text-centered">
+    <video id="dist2"
+    controls
+    muted
+    autoplay
+    loop
+    width="99%">
+    <source src="media/videos/door0.6.mp4" 
+    type="video/mp4">
+</video>
+<p style="text-align:center">
+    door width = 0.6 m
+</p>
 </div>
 
 <div class="column has-text-centered">
@@ -780,6 +861,7 @@ All videos are in <b>real time</b>.
 </div>
 </div>
 </section>
+
 
 
 <section class="section">
@@ -887,34 +969,6 @@ All videos are in <b>real time</b>.
 </section>
 
 
-<section class="section">
-    <div class="container is-max-widescreen">
-        
-        <div class="rows">
-            
-            
-            <!-- Animation. -->
-            <div class="rows is-centered ">
-                <div class="row is-full-width">
-                    <h2 class="title is-3">Meta-Control Pipeline</h2>
-                    
-                    <!-- Interpolating. -->
-                    <div class="content has-text-justified">
-                        <!-- <br> -->
-                    </div>
-                    <img src="media/figures/hierarchical-synthesis.png" class="interpolation-image" />
-                </br>
-            </br>
-            <p class="content has-text-justified">
-                Overview of Meta-Control pipeline. Meta-Control harness LLM's control knowledge to synthesize skills with a 3-level pipeline: strategy level, data flow level, and parameter level. The user only needs to provide the skill description. Meta-Control first designs the system with dynamic model and controller templates, then connects all modules by correctly understanding the semantic meaning of the interfaces, and finally evaluates the synthesized control system and optimizes the parameters based on execution results through few-shot interactions. 
-            </p>
-            
-        </br>
-    <!--/ Re-rendering. -->
-</div>
-</div>
-</section>
-
 
 <section class="section">
     <div class="container is-max-widescreen">
@@ -944,7 +998,7 @@ All videos are in <b>real time</b>.
                 <a href="prompts/controller_summary.yaml">Controller Templates</a> |
                 <a href="prompts/input_port_sample.md">Input Port Samples</a>
             </p>
-
+            
             <p class="content has-text-justified">
                 Prompts of the tasks:
                 <br>
@@ -956,20 +1010,6 @@ All videos are in <b>real time</b>.
         </div>
     </div>
 </section>
-
-
-<section class="section" id="BibTeX">
-    <div class="container is-max-widescreen content">
-        <h2 class="title">BibTeX</h2>
-        <pre><code>@article{wei2024meta,
-            title={Meta-Control: Automatic Model-based Control System Synthesis for Heterogeneous Robot Skills},
-            author={Wei, Tianhao and Ma, Liqian and Chen, Rui and Zhao, Weiye and Liu, Changliu},
-            journal={arXiv preprint},
-            year={2024}
-        }</code></pre>
-    </div>
-</section>
-
 
 <footer class="footer">
     <div class="container">
